@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ApplicationDetails">
+    <include
+        layout="@layout/bar_layout">
+
+    </include>
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/inst"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/AppLabel"
+
+        ></ImageView>
+    <TextView
+        android:id="@+id/AppLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instagram"
+        android:textColor="#111111"
+        android:textSize="25dp"
+        android:layout_centerInParent="true"
+
+        ></TextView>
+
+    </RelativeLayout>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+
+
+       >
+       <ImageView
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:src="@drawable/permission1"
+           android:layout_toLeftOf="@+id/permitText"
+           android:layout_marginRight="10dp"
+
+           ></ImageView>
+
+    <TextView
+        android:id="@+id/permitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Permissions"
+        android:textSize="20dp"
+        android:textColor="#0A3CF3"
+        ></TextView>
+
+       <Button
+           android:id="@+id/btn_witelist"
+           android:layout_toRightOf="@+id/permitText"
+           android:layout_width="wrap_content"
+           android:layout_marginLeft="10dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:text="Whitelist?"
+           android:background="#A6E4AB"
+           ></Button>
+
+
+   </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="4"
+
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPermissions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

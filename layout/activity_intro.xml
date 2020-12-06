@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundClr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".intro">
+    <include
+        layout="@layout/bar_layout">
+
+    </include>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        android:gravity="center"
+
+        android:textSize="50dp"
+        android:textColor="#1A237E"
+        ></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/apps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1B5E20"
+                android:text="Total Apps"
+                android:textSize="30dp"></TextView>
+
+            <TextView
+                android:id="@+id/countTotalApps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textColor="#0F23F3"
+                android:layout_marginLeft="50dp"
+                android:textSize="30dp"></TextView>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:id="@+id/scannedaApps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Scanned Apps"
+                android:textColor="#1B5E20"
+                android:textSize="30dp"></TextView>
+
+            <TextView
+                android:id="@+id/countScannedApps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="20"
+                android:textColor="#A84021"
+                android:textSize="30dp"></TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar.Large"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/circular"
+        android:max="100"
+        android:indeterminate="false"
+        android:progress="20"
+        android:layout_centerInParent="true"
+        ></androidx.core.widget.ContentLoadingProgressBar>
+    <LinearLayout
+        android:id="@+id/outPutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Completed!"
+            android:textColor="#65E06E"
+            android:textSize="30dp"
+            android:id="@+id/scanCompleted"
+            android:gravity="center"
+            ></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Malicious Detected!"
+            android:layout_marginTop="5dp"
+            android:textColor="#E7273D"
+            android:textSize="20dp"
+            android:id="@+id/malFound"
+            android:gravity="center"
+            ></TextView>
+        <Button
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toMalicious"
+            android:text="Check Malcious Apps"
+            android:textColor="#ffff"
+
+            android:background="#424ED6"
+
+            ></Button>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
